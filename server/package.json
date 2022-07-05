@@ -1,0 +1,47 @@
+{
+  "name": "ts-node-server",
+  "version": "1.0.0",
+  "description": "Node and TS Starter",
+  "main": "server.ts",
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "rm -rf build/ && tsc && cp .env build/src/ ",
+    "run_prod": "cross-env NODE_ENV=development node build/server.js",
+    "lint": "eslint . --ext .ts",
+    "start": "node src/server.js"
+  },
+  "author": "Izak Blom",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^8.19.0",
+    "express": "^4.17.1",
+    "joi": "^17.6.0",
+    "pg": "^8.7.3",
+    "postgres-migrations": "^5.3.0",
+    "swagger-jsdoc": "^5.0.0",
+    "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.24",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^14.14.6",
+    "@types/pg": "^8.6.5",
+    "@types/sequelize": "^4.28.9",
+    "@types/supertest": "^2.0.10",
+    "@types/swagger-jsdoc": "^3.0.2",
+    "@types/swagger-ui-express": "^4.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "jest": "^28.1.2",
+    "prettier": "^2.7.1",
+    "supertest": "^6.0.1",
+    "ts-jest": "^28.0.5",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.7.4"
+  }
+}

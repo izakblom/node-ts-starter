@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  server:
+    container_name: node-ts-server
+    restart: always
+    environment:
+      - DATABASE_NAME=PostgresTest
+      - DATABASE_USER=NodeTS
+      - DATABASE_PASSWORD=verysecretpassword
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+    depends_on:
+      - postgres
+    build:
+      context: ./server/
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - default
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=verysecretpassword
+      - POSTGRES_USER=NodeTS
+      - POSTGRES_DB=PostgresTest
+    ports:
+      - "5432:5432"
