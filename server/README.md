@@ -84,4 +84,4 @@ The [swagger-jsdoc](https://www.npmjs.com/package/swagger-jsdoc) npm package all
 14. [supertest](https://www.npmjs.com/package/supertest) npm package allows HTTP assertions in Unit test implementations for NodeJS allowing API endpoint unit testing.
 15. [joi](https://www.npmjs.com/package/joi) Powerful validation library
 16. [jest](https://www.npmjs.com/package/jest) Unit test framework
-17. [ts-jest]((https://www.npmjs.com/package/ts-jest) Jest unit testing for Typescript
+17. [ts-jest](https://www.npmjs.com/package/ts-jest) Jest unit testing for Typescript
